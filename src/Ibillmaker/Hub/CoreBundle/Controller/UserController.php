@@ -18,8 +18,8 @@ class UserController extends BaseUserController
             throw new NotFoundHttpException('Invalid Request.');
         }
         $user = parent::createNew();
-//        var_dump($user);
-//        exit;
+        var_dump($user);
+        exit;
         $user->setAdmin($adminUser);
 
         return $user;

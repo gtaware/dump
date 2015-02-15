@@ -50,12 +50,7 @@
             <td>
                 <div class="pull-right">
                 {{ buttons.show(path('sylius_backend_order_show', {'id': order.id})) }}
-                {% if not order.deleted %}
-                    {% if not order.shippingState is constant('Sylius\\Component\\Shipping\\Model\\ShipmentInterface::STATE_SHIPPED') %}
-                        {{ buttons.edit(path('sylius_backend_order_update', {'id': order.id})) }}
-                    {% endif %}
-                    {{ buttons.delete(path('sylius_backend_order_delete', {'id': order.id})) }}
-                {% endif %}
+                
                 </div>
             </td>
         </tr>
