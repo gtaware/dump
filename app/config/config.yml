@@ -66,7 +66,7 @@ doctrine:
                 dql:
                     string_functions:
                         MATCH: Sylius\Bundle\SearchBundle\Extension\Doctrine\MatchAgainstFunction
-
+   
 doctrine_phpcr:
     session:
         backend: %sylius.phpcr.backend%
@@ -83,3 +83,12 @@ swiftmailer:
     port:      %sylius.mailer.port%
     username:  %sylius.mailer.user%
     password:  %sylius.mailer.password%
+
+stof_doctrine_extensions:
+    default_locale: %sylius.locale%
+    orm:
+        default:
+            tree: true
+            sluggable: true
+            timestampable: true
+            softdeleteable: true
